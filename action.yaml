@@ -1,0 +1,18 @@
+name: "Podcast Generator [Action Source]"
+author: "HeliosX"
+description: "Generates a feed for a podcast from a YAML file"
+runs: 
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "git-branch"
+  color: "green"
+inputs:
+  email:
+    description: The commiter's Email
+    required: true
+    default: ${{github.actor}}@localhost
+  name:
+    desciption: The commiter's Name
+    required: true
+    default: ${{github.actor}}
